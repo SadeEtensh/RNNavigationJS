@@ -10,8 +10,13 @@
 ## React Navigation
 
 - provides a variety of navigators like Stack, Drawer and Tab navigators
+- Installation(expo)
+  - npm install @react-navigation/native
+  - npx expo install react-native-screens react-native-safe-area-context
 
 ## Stack Navigation
+
+![Alt text](<Screenshot 2023-10-11 at 12.15.01 in the afternoon.png>)
 
 - Each screen is stacked on top of previous one like a deck of cards
 - when you navigate to a new screen, a new card is placed on the top of the stack, and when you navigate back,the top card is removed, revealing the previous screen.
