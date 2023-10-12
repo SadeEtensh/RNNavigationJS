@@ -6,7 +6,7 @@ export default function HomeScreen({ navigation }) {
   //   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.headingText}>HomeScreen</Text>
+      <Text style={styles.headingText}>Home Screen</Text>
       <Button
         title="Go to About"
         onPress={() =>

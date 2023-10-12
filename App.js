@@ -3,7 +3,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
 import { Pressable, Text } from "react-native";
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -13,7 +12,6 @@ export default function App() {
         initialRouteName="Home"
         screenOptions={{
           contentStyle: {
-            // screen specific option
             backgroundColor: "#e8e4f1",
           },
         }}
@@ -50,6 +48,9 @@ export default function App() {
           component={AboutScreen}
           initialParams={{
             name: "Guest",
+          }}
+          options={({ route }) => {
+            title: route.params.name;
           }}
         />
       </Stack.Navigator>
