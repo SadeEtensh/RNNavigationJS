@@ -1,59 +1,29 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import DashboardScreeen from "./screens/DashboardScreeen";
+import SettingScreen from "./screens/SettingScreen";
 import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
-import { Pressable, Text } from "react-native";
-const Stack = createNativeStackNavigator();
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          contentStyle: {
-            backgroundColor: "#e8e4f1",
-          },
-        }}
-      >
-        <Stack.Screen
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen
           name="Home"
           component={HomeScreen}
           options={{
-            title: "Welcome Home",
-            headerStyle: {
-              backgroundColor: "#6a51ae",
-            },
-            headerTintColor: "#fff",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-            headerRight: () => (
-              <Pressable onPress={() => alert("Menu Button pressed")}>
-                <Text
-                  style={{ color: "white", fontSize: 16, fontWeight: "bold" }}
-                >
-                  Menu
-                </Text>
-              </Pressable>
-            ),
-            contentStyle: {
-              // screen specific option
-              backgroundColor: "#e8e4f1",
-            },
+            drawerActiveBackgroundColor: "#330099",
+            drawerInactiveBackgroundColor: "green",
           }}
         />
-        <Stack.Screen
-          name="About"
-          component={AboutScreen}
-          initialParams={{
-            name: "Guest",
-          }}
-          options={({ route }) => {
-            title: route.params.name;
-          }}
-        />
-      </Stack.Navigator>
+        <Drawer.Screen name="About" component={AboutScreen} />
+        <Drawer.Screen name="Dashboad" component={DashboardScreeen} />
+        <Drawer.Screen name="Setting" component={SettingScreen} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
