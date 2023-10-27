@@ -16,8 +16,12 @@ export default function App() {
           name="Home"
           component={HomeScreen}
           options={{
-            drawerActiveBackgroundColor: "#330099",
-            drawerInactiveBackgroundColor: "green",
+            // drawerActiveBackgroundColor: "#330099",
+            // drawerInactiveBackgroundColor: "orange",
+            drawerActiveTintColor: "orange",
+            drawerContentStyle: {
+              backgroundColor: "#330099",
+            },
           }}
         />
         <Drawer.Screen name="About" component={AboutScreen} />
