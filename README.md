@@ -46,3 +46,4 @@
 - allows us to combine the powers of diffrent types navigators, creating a seemless and organized user exprience.
 - It's like having a main road with smaller branching lanes, each having its own set of rules yet interconnected.
 - like nest stack Nav with Tab navigator.
+- consider little nesting
