@@ -47,3 +47,5 @@
 - It's like having a main road with smaller branching lanes, each having its own set of rules yet interconnected.
 - like nest stack Nav with Tab navigator.
 - consider little nesting
+
+![Alt text](<Screenshot 2023-10-30 at 5.12.29 in the afternoon.png>)
