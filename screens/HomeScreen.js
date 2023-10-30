@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 // import { useNavigation } from "@react-navigation/native";
 import React from "react";
 
-export default function HomeScreen({ navigation }) {
+const HomeScreen = ({ navigation }) => {
   //   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -17,7 +17,7 @@ export default function HomeScreen({ navigation }) {
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
